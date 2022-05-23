@@ -1,17 +1,18 @@
 
-#include<stdio.h>
+#include <stdio.h>
 int main()
-{
-    int a,b,lcm,fact=1;
-    scanf("%d%d",&a,&b);
-    lcm=(a>b) ? a:b ;
-    while(fact)
-    {
-        if(lcm%a==0 && lcm%b==0)
-        {
-            printf("%d",lcm);
-            fact=0;
+ {
+    int n1, n2, max;
+    scanf("%d %d", &n1, &n2);
+   max = (n1 > n2) ? n1 : n2;
+  while (1) 
+  {
+        if (max % n1 == 0 && max % n2 == 0) 
+		{
+            printf("%d",  max);
+            break;
         }
-        lcm++;
+        ++max;
     }
-}
+    return 0;
+ }
